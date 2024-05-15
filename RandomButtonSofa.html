@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap" rel="stylesheet">
+	<title>Random Meme Button</title>
+	<style>
+		.button-82-pushable {
+			position: relative;
+			border: none;
+			background: transparent;
+			padding: 0;
+			cursor: pointer;
+			outline-offset: 4px;
+			transition: filter 250ms;
+			user-select: none;
+			-webkit-user-select: none;
+			touch-action: manipulation;
+		}
+
+		.button-82-shadow {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 12px;
+			background: hsl(0deg 0% 0% / 0.25);
+			will-change: transform;
+			transform: translateY(2px);
+			transition:
+				transform 600ms cubic-bezier(.3, .7, .4, 1);
+		}
+
+		.button-82-edge {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 12px;
+			background: linear-gradient(to left,
+					hsl(340deg 100% 16%) 0%,
+					hsl(340deg 100% 32%) 8%,
+					hsl(340deg 100% 32%) 92%,
+					hsl(340deg 100% 16%) 100%);
+		}
+
+		.button-82-front {
+			display: block;
+			position: relative;
+			padding: 12px 27px;
+			border-radius: 12px;
+			font-size: 1.1rem;
+			color: white;
+			background: hsl(345deg 100% 47%);
+			will-change: transform;
+			transform: translateY(-4px);
+			transition:
+				transform 600ms cubic-bezier(.3, .7, .4, 1);
+		}
+
+		@media (min-width: 768px) {
+			.button-82-front {
+				font-size: 1.25rem;
+				padding: 12px 42px;
+			}
+		}
+
+		.button-82-pushable:hover {
+			filter: brightness(110%);
+			-webkit-filter: brightness(110%);
+		}
+
+		.button-82-pushable:hover .button-82-front {
+			transform: translateY(-6px);
+			transition:
+				transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+		}
+
+		.button-82-pushable:active .button-82-front {
+			transform: translateY(-2px);
+			transition: transform 34ms;
+		}
+
+		.button-82-pushable:hover .button-82-shadow {
+			transform: translateY(4px);
+			transition:
+				transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+		}
+
+		.button-82-pushable:active .button-82-shadow {
+			transform: translateY(1px);
+			transition: transform 34ms;
+		}
+
+		.button-82-pushable:focus:not(:focus-visible) {
+			outline: none;
+		}
+
+		.button-49,
+		.button-49:after {
+			width: 150px;
+			height: 76px;
+			line-height: 78px;
+			font-size: 16px;
+			font-family: 'Bebas Neue', sans-serif;
+			background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+			border: 0;
+			color: #fff;
+			letter-spacing: 3px;
+			box-shadow: 6px 0px 0px #00E6F6;
+			outline: transparent;
+			position: relative;
+			user-select: none;
+			-webkit-user-select: none;
+			touch-action: manipulation;
+		}
+
+		.button-49:after {
+			--slice-0: inset(50% 50% 50% 50%);
+			--slice-1: inset(80% -6px 0 0);
+			--slice-2: inset(50% -6px 30% 0);
+			--slice-3: inset(10% -6px 85% 0);
+			--slice-4: inset(40% -6px 43% 0);
+			--slice-5: inset(80% -6px 5% 0);
+
+			content: 'ALTERNATE TEXT';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+			text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+			clip-path: var(--slice-0);
+		}
+
+		.button-49:hover:after {
+			animation: 1s glitch;
+			animation-timing-function: steps(2, end);
+		}
+
+		@keyframes glitch {
+			0% {
+				clip-path: var(--slice-1);
+				transform: translate(-20px, -10px);
+			}
+
+			10% {
+				clip-path: var(--slice-3);
+				transform: translate(10px, 10px);
+			}
+
+			20% {
+				clip-path: var(--slice-1);
+				transform: translate(-10px, 10px);
+			}
+
+			30% {
+				clip-path: var(--slice-3);
+				transform: translate(0px, 5px);
+			}
+
+			40% {
+				clip-path: var(--slice-2);
+				transform: translate(-5px, 0px);
+			}
+
+			50% {
+				clip-path: var(--slice-3);
+				transform: translate(5px, 0px);
+			}
+
+			60% {
+				clip-path: var(--slice-4);
+				transform: translate(5px, 10px);
+			}
+
+			70% {
+				clip-path: var(--slice-2);
+				transform: translate(-10px, 10px);
+			}
+
+			80% {
+				clip-path: var(--slice-5);
+				transform: translate(20px, -10px);
+			}
+
+			90% {
+				clip-path: var(--slice-1);
+				transform: translate(-10px, 0px);
+			}
+
+			100% {
+				clip-path: var(--slice-1);
+				transform: translate(0);
+			}
+		}
+
+		@media (min-width: 768px) {
+
+			.button-49,
+			.button-49:after {
+				width: 200px;
+				height: 86px;
+				line-height: 88px;
+			}
+		}
+
+		* {
+			font-family: "Vast Shadow", serif;
+			font-weight: 400;
+			font-style: normal;
+			text-align: center;
+		}
+
+		.center {
+			margin: auto;
+			margin-top: 20vh;
+			width: 50%;
+			height: 50vh;
+			/*  border: 3px solid green;*/
+			padding: ;
+		}
+	</style>
+</head>
+
+
+<body>
+	<div class="center">
+		<h1> Click the Button</h1>
+		<h1>To Go To A</h1>
+
+		<button class="button-82-pushable" role="button" id="randomButton">
+			<span class="button-82-shadow"></span>
+			<span class="button-82-edge"></span>
+			<span class="button-82-front text">Random Meme</span>
+		</button>
+
+		<button class="button-82-pushable" role="button">
+			<span class="button-82-shadow"></span>
+			<span class="button-82-edge"></span>
+		</button>
+
+		<script>
+			document.getElementById('randomButton').addEventListener('click', function () {
+				var websites = [
+					"https://m.youtube.com/shorts/Pw3gFL-YcCI",
+					"https://drive.google.com/file/d/1GLSicnKNTrLRo1B8H0o0mwnU-uKBdcGA/view?usp=drive_link",
+					"https://drive.google.com/file/d/1uG7hl7q8sHiNPIEAuU6cH6WWp9oaJgJA/view?usp=drive_link",
+					"https://drive.google.com/file/d/1y2gQyYMP5wOOpdygfKpO-pekYK2px54l/view?usp=drive_link",
+					"https://drive.google.com/file/d/1y_D5NNGasy8Og0ELRJ51FOTUzcoCaNtx/view?usp=drive_link",
+					"https://drive.google.com/file/d/1xxBeuprvwDH9-X3qyXKw_qmukzLvu7WP/view?usp=drive_link",
+					"https://drive.google.com/file/d/1sTGC201mRW0vw6Vi7tQsd5Mak2NO7mtN/view?usp=drive_link",
+					"https://drive.google.com/file/d/1xDmfvDPj-aEwYeAiFRNhXRPtrEDjPBd0/view?usp=drive_link",
+					"https://drive.google.com/file/d/1iB50V-WyhRq0ZWIK9nQyLvnHQ2JpA3fj/view?usp=drive_link",
+					"https://drive.google.com/file/d/1rgiiZ-8Xf2pwEqRyHUX_7bNpUzrN54WU/view?usp=drive_link",
+					"https://drive.google.com/file/d/1cgedsDbKVL-JXEHZdy6nqol35coRTLS4/view?usp=drive_link",
+					"https://drive.google.com/file/d/1-ydwaRuX_tEsy4iyYrit31T7eQQKRS39/view?usp=drive_link",
+					"https://drive.google.com/file/d/18FW16vbxYd8UL4RPnAHPgoc41NVuFEZ0/view?usp=drive_link",
+					"https://drive.google.com/file/d/1RENjI2KJ5U_Ax8QdypdRvv_nFydtDqPt/view?usp=drive_link",
+					"https://drive.google.com/file/d/185lysHI7CF-clbn_EKDLbd_68dRwGcgP/view?usp=drive_link",
+					"https://drive.google.com/file/d/15I_qkXj29GxGVX21Il87KYzH5V9Y7IDn/view?usp=drive_link",
+					"https://drive.google.com/file/d/10bIMTgOM2US92iVjqn4XXTbQBU01StsQ/view?usp=drive_link",
+					"https://drive.google.com/file/d/1hKw5MfGD4iq0-KrtCS9iH1E2L1lLlbrR/view?usp=drive_link",
+					"https://drive.google.com/file/d/1jrBRGrHLlgi0wn4K3QcWR8XZe4-eAPpm/view?usp=drive_link",
+					"https://docs.google.com/document/d/10ouhSMCNUztDxK8U_Hdv56kFN1GSHzTsZRiqgICUtCs/edit?usp=drive_link",
+					"https:m.youtube.com/watch v=vqP37h69JBM&t=65s&pp=ygUhaWNlIGNyZWFtIHNhbmR3aWNoIG91dCBvZiBjb250ZXh0",	
+					"https://m.youtube.com/watch?v=b5xCzxTIrm4&t=216s&pp=ygUhaWNlIGNyZWFtIHNhbmR3aWNoIG91dCBvZiBjb250ZXh0",
+					"https://m.youtube.com/shorts/T89V6tmRF3g",
+					"https://m.youtube.com/shorts/ZUHvXFcevCM",
+					"https://m.youtube.com/watch?v=ZDW7pumIo48&pp=ygUZYnJvb2tseW4gOTkgZnVubnkgbW9tZW50cw%3D%3D",
+				];
+
+				var randomIndex = Math.floor(Math.random() * websites.length);
+				var randomWebsite = websites[randomIndex];
+				window.location.href = randomWebsite;
+			});
+		</script>
+
+		<br><br><br><br><br>
+
+		<button class="button-49" style="vertical-align: bottom" role="button" id="dontpress">Daily Meme</button>
+		<script>
+			// const date = new Date();
+			// Create a new Date object
+			var currentDate = new Date();
+
+			// Get the current day of the year
+			var dayOfYear = Math.floor((currentDate - new Date(currentDate.getFullYear(), 0, 0)) / 86400000);
+
+			// Output the result
+
+			document.getElementById('dontpress').addEventListener('click', function () {
+				var websites = [
+					
+					
+					"https://m.youtube.com/watch?v=bv3VdaGQ_00&pp=ygUJUmF0YXRvaW5n",
+					"https://m.youtube.com/watch?v=pZ-oEuWMszs&pp=ygUebXIgYm9vbWJhc3RpYyBib21iYSBmYW50YXN0aWMg",
+					"https://m.youtube.com/watch?v=24GNspTbGXo&pp=ygUcaG9tZSBkZXBvdCBzb25nIGJhc3MgYm9vc3RlZA%3D%3D",
+					"https://m.youtube.com/shorts/Dv8F9Nzifzg",
+					"https://m.youtube.com/watch?v=6tPsoJXFdC4&pp=ygUZYnJvb2tseW4gOTkgZnVubnkgbW9tZW50cw%3D%3D",
+					"https://m.youtube.com/watch?v=_G9v8jYPPwU&pp=ygUZYnJvb2tseW4gOTkgZnVubnkgbW9tZW50cw%3D%3D",
+					"https://m.youtube.com/shorts/Oly8f4h5C78",
+					"https://m.youtube.com/shorts/NDkF47oakuY",
+					
+					// Add more websi				  
+				// console.log(date);
+					]
+				console.log('hi');
+				//var randomIndex = Math.floor(Math.random * websites.length)
+				var randomWebsite = websites[dayOfYear%websites.length];
+				window.location.href = randomWebsite
+			});
+</script>
+</div>
+</body>
+</html>
