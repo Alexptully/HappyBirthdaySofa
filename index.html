@@ -33,7 +33,7 @@
 			will-change: transform;
 			transform: translateY(2px);
 			transition:
-				transform 600ms cubic-bezier(.3, .7, .4, 1);
+			transform 600ms cubic-bezier(.3, .7, .4, 1);
 		}
 
 		.button-82-edge {
@@ -44,10 +44,10 @@
 			height: 100%;
 			border-radius: 12px;
 			background: linear-gradient(to left,
-					hsl(340deg 100% 16%) 0%,
-					hsl(340deg 100% 32%) 8%,
-					hsl(340deg 100% 32%) 92%,
-					hsl(340deg 100% 16%) 100%);
+				hsl(340deg 100% 16%) 0%,
+				hsl(340deg 100% 32%) 8%,
+				hsl(340deg 100% 32%) 92%,
+				hsl(340deg 100% 16%) 100%);
 		}
 
 		.button-82-front {
@@ -61,7 +61,7 @@
 			will-change: transform;
 			transform: translateY(-4px);
 			transition:
-				transform 600ms cubic-bezier(.3, .7, .4, 1);
+			transform 600ms cubic-bezier(.3, .7, .4, 1);
 		}
 
 		@media (min-width: 768px) {
@@ -79,7 +79,7 @@
 		.button-82-pushable:hover .button-82-front {
 			transform: translateY(-6px);
 			transition:
-				transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+			transform 250ms cubic-bezier(.3, .7, .4, 1.5);
 		}
 
 		.button-82-pushable:active .button-82-front {
@@ -90,7 +90,7 @@
 		.button-82-pushable:hover .button-82-shadow {
 			transform: translateY(4px);
 			transition:
-				transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+			transform 250ms cubic-bezier(.3, .7, .4, 1.5);
 		}
 
 		.button-82-pushable:active .button-82-shadow {
@@ -107,8 +107,6 @@
 			width: 150px;
 			height: 76px;
 			line-height: 78px;
-			font-size: 16px;
-			font-family: 'Bebas Neue', sans-serif;
 			background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
 			border: 0;
 			color: #fff;
@@ -129,7 +127,7 @@
 			--slice-4: inset(40% -6px 43% 0);
 			--slice-5: inset(80% -6px 5% 0);
 
-			content: 'ALTERNATE TEXT';
+			content: 'MEME';
 			display: block;
 			position: absolute;
 			top: 0;
@@ -222,7 +220,7 @@
 
 		.center {
 			margin: auto;
-			margin-top: 20vh;
+			margin-top: 15vh;
 			width: 50%;
 			height: 50vh;
 			/*  border: 3px solid green;*/
@@ -235,7 +233,7 @@
 <body>
 	<div class="center">
 		<h1> Click the Button</h1>
-		<h1>To Go To A</h1>
+		<h1>to go to a</h1>
 
 		<button class="button-82-pushable" role="button" id="randomButton">
 			<span class="button-82-shadow"></span>
@@ -271,12 +269,13 @@
 					"https://drive.google.com/file/d/1hKw5MfGD4iq0-KrtCS9iH1E2L1lLlbrR/view?usp=drive_link",
 					"https://drive.google.com/file/d/1jrBRGrHLlgi0wn4K3QcWR8XZe4-eAPpm/view?usp=drive_link",
 					"https://docs.google.com/document/d/10ouhSMCNUztDxK8U_Hdv56kFN1GSHzTsZRiqgICUtCs/edit?usp=drive_link",
-					"https:m.youtube.com/watch v=vqP37h69JBM&t=65s&pp=ygUhaWNlIGNyZWFtIHNhbmR3aWNoIG91dCBvZiBjb250ZXh0",	
+					"https:m.youtube.com/watch v=vqP37h69JBM&t=65s&pp=ygUhaWNlIGNyZWFtIHNhbmR3aWNoIG91dCBvZiBjb250ZXh0",
 					"https://m.youtube.com/watch?v=b5xCzxTIrm4&t=216s&pp=ygUhaWNlIGNyZWFtIHNhbmR3aWNoIG91dCBvZiBjb250ZXh0",
 					"https://m.youtube.com/shorts/T89V6tmRF3g",
 					"https://m.youtube.com/shorts/ZUHvXFcevCM",
 					"https://m.youtube.com/watch?v=ZDW7pumIo48&pp=ygUZYnJvb2tseW4gOTkgZnVubnkgbW9tZW50cw%3D%3D",
-				];
+					// Add more websites
+					];
 
 				var randomIndex = Math.floor(Math.random() * websites.length);
 				var randomWebsite = websites[randomIndex];
@@ -284,23 +283,14 @@
 			});
 		</script>
 
-		<br><br><br><br><br>
+		<br><br><br><br>
+		<h1>Meme of the day:</h1>
 
-		<button class="button-49" style="vertical-align: bottom" role="button" id="dontpress">Daily Meme</button>
+		<button class="button-49" role="button" id="dontpress">Daily Meme</button>
 		<script>
-			// const date = new Date();
-			// Create a new Date object
-			var currentDate = new Date();
-
-			// Get the current day of the year
-			var dayOfYear = Math.floor((currentDate - new Date(currentDate.getFullYear(), 0, 0)) / 86400000);
-
-			// Output the result
-
+			
 			document.getElementById('dontpress').addEventListener('click', function () {
-				var websites = [
-					
-					
+				var memes = [
 					"https://m.youtube.com/watch?v=bv3VdaGQ_00&pp=ygUJUmF0YXRvaW5n",
 					"https://m.youtube.com/watch?v=pZ-oEuWMszs&pp=ygUebXIgYm9vbWJhc3RpYyBib21iYSBmYW50YXN0aWMg",
 					"https://m.youtube.com/watch?v=24GNspTbGXo&pp=ygUcaG9tZSBkZXBvdCBzb25nIGJhc3MgYm9vc3RlZA%3D%3D",
@@ -309,16 +299,16 @@
 					"https://m.youtube.com/watch?v=_G9v8jYPPwU&pp=ygUZYnJvb2tseW4gOTkgZnVubnkgbW9tZW50cw%3D%3D",
 					"https://m.youtube.com/shorts/Oly8f4h5C78",
 					"https://m.youtube.com/shorts/NDkF47oakuY",
-					
-					// Add more websi				  
-				// console.log(date);
-					]
-				console.log('hi');
-				//var randomIndex = Math.floor(Math.random * websites.length)
-				var randomWebsite = websites[dayOfYear%websites.length];
-				window.location.href = randomWebsite
+					];
+
+				const date = new Date();
+				const day = date.getDate();
+
+				var dailyMeme = memes[(day % memes.length)];
+				// console.log(dailyMeme);
+				window.location.href = dailyMeme
 			});
-</script>
-</div>
+		</script>
+	</div>
 </body>
 </html>
